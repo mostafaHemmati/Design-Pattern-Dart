@@ -10,12 +10,11 @@ void main(List<String> arguments) {
 class SingletonObject {
   static SingletonObject? _instance;
   var c = 0;
+
   _SingletonObject() {}
 
   static SingletonObject getInstance() {
-    if (_instance == null) {
-      _instance = SingletonObject();
-    }
+    _instance ??= SingletonObject();
     return _instance!;
   }
 
