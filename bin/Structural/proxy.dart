@@ -3,7 +3,7 @@ void main(List<String> args) {
 
   //image will be loaded from disk
   image.display();
-  print("---------");
+  print("-----------------");
 
   //image will not be loaded from disk
   image.display();
