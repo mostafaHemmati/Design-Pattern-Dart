@@ -7,6 +7,13 @@ void main(List<String> args) {
 
   Shape redRectangle = RedShapeDecorator(Rectangle());
   redRectangle.draw();
+
+// -------------- <Output>-----------
+
+// Shape: Circle
+// Border Color: Red
+// Shape: Rectangle
+// Border Color: Red
 }
 
 class Shape {

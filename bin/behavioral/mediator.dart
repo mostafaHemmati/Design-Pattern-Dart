@@ -4,18 +4,22 @@ void main(List<String> args) {
 
   robert.sendMessage("Hi! John!");
   john.sendMessage("Hello! Robert!");
+
+// -------------- <Output>-----------
+//  [ Robert  ] :  Hi! John!
+//  [ John  ] :  Hello! Robert!
 }
 
 class ChatRoom {
   static void sendMessage(User user, String message) {
-    print(" [ ${user.getName()}  ] :  $message");
+    print(" [ ${user.name}  ] :  $message");
   }
 }
 
 class User {
   late final String _name;
 
-  String getName() => _name;
+  String get name => _name;
 
   User(this._name);
   void sendMessage(String message) {

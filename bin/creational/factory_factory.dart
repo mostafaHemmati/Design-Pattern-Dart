@@ -10,6 +10,12 @@ void main(List<String> args) {
   roundedRectangle!.draw();
   var roundedSquare = roundedShape.getShape(ShapeType.roundedSquare);
   roundedSquare!.draw();
+
+// -------------- <Output>-----------
+// Inside Rectangle::draw() method.
+// Inside Square::draw() method.
+// Inside Rounded Rectangle::draw() method.
+// Inside Rounded Square::draw() method.
 }
 
 class Shape {

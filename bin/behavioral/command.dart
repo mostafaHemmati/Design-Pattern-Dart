@@ -9,6 +9,10 @@ void main(List<String> args) {
   broker.takeOrder(sellStockOrder);
 
   broker.placeOrders();
+
+  // -------------- <Output>-----------
+// stock { name : ABC Quantity : 10 ] bought
+// Stock [ Name: ABC  Quantity: 10  ] sold
 }
 
 class Order {

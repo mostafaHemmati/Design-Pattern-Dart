@@ -2,44 +2,50 @@ void main(List<String> args) {
   Originator originator = Originator();
   CareTaker careTaker = CareTaker();
 
-  originator.setState("State #1");
-  originator.setState("State #2");
+  originator.state = "State #1";
+  originator.state = "State #2";
   careTaker.add(originator.saveStateToMemento());
 
-  originator.setState("State #3");
+  originator.state = "State #3";
   careTaker.add(originator.saveStateToMemento());
 
-  originator.setState("State #4");
-  print("Current State: ${originator.getState()}");
+  originator.state = "State #4";
+  print("Current State: ${originator.state}");
 
   originator.getStateFromMemento(careTaker.get(0));
-  print("First saved State: ${originator.getState()}");
+  print("First saved State: ${originator.state}");
   originator.getStateFromMemento(careTaker.get(1));
-  print("Second saved State: ${originator.getState()}");
+  print("Second saved State: ${originator.state}");
+
+// -------------- <Output>-----------
+// Current State: State #4
+// First saved State: State #2
+// Second saved State: State #3
 }
 
 class Memento {
-  late final String _state;
+  final String _state;
+
+  String get state => _state;
 
   Memento(this._state);
-
-  getState() => _state;
 }
 
 class Originator {
-  String _state = "";
-  void setState(String state) {
+  late String _state;
+
+  String get state => _state;
+
+  set state(String state) {
     _state = state;
   }
-
-  getState() => _state;
 
   Memento saveStateToMemento() {
     return Memento(_state);
   }
 
   void getStateFromMemento(Memento memento) {
-    _state = memento.getState();
+    _state = memento.state;
   }
 }
 

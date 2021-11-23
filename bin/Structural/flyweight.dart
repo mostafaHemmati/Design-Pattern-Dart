@@ -11,6 +11,33 @@ void main(List<String> args) {
     circle.setRadius(100);
     circle.draw();
   }
+
+// -------------- <Output>-----------
+// Creating circle of color : White
+// Circle: Draw() [Color : White, x : 0, y :63, radius : 100
+// Creating circle of color : Black
+// Circle: Draw() [Color : Black, x : 3, y :3, radius : 100
+// Creating circle of color : Blue
+// Circle: Draw() [Color : Blue, x : 97, y :11, radius : 100
+// Circle: Draw() [Color : White, x : 80, y :89, radius : 100
+// Circle: Draw() [Color : Blue, x : 85, y :27, radius : 100
+// Creating circle of color : Red
+// Circle: Draw() [Color : Red, x : 99, y :44, radius : 100
+// Circle: Draw() [Color : Red, x : 21, y :32, radius : 100
+// Circle: Draw() [Color : White, x : 54, y :74, radius : 100
+// Circle: Draw() [Color : White, x : 9, y :34, radius : 100
+// Circle: Draw() [Color : Black, x : 26, y :14, radius : 100
+// Circle: Draw() [Color : White, x : 70, y :67, radius : 100
+// Creating circle of color : Green
+// Circle: Draw() [Color : Green, x : 73, y :24, radius : 100
+// Circle: Draw() [Color : Blue, x : 78, y :93, radius : 100
+// Circle: Draw() [Color : Black, x : 87, y :35, radius : 100
+// Circle: Draw() [Color : Red, x : 89, y :7, radius : 100
+// Circle: Draw() [Color : White, x : 77, y :70, radius : 100
+// Circle: Draw() [Color : White, x : 97, y :72, radius : 100
+// Circle: Draw() [Color : Red, x : 37, y :46, radius : 100
+// Circle: Draw() [Color : White, x : 77, y :82, radius : 100
+// Circle: Draw() [Color : Red, x : 32, y :87, radius : 100
 }
 
 class Shape {

@@ -7,11 +7,17 @@ void main(List<String> args) {
   print(pool.toString());
   pool.checkIn(p1);
   print(pool.toString());
+
+// -------------- <Output>-----------
+// Pool available = 0  inUse = 0
+// Pool available = 0  inUse = 1
+// Pool available = 0  inUse = 2
+// Pool available = 1  inUse = 1
 }
 
 abstract class ObjectPool<T> {
-  final _available = Set<T>();
-  final _inUse = Set<T>();
+  final _available = <T>{};
+  final _inUse = <T>{};
 
   T create();
 

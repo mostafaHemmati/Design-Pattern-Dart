@@ -7,6 +7,14 @@ void main(List<String> args) {
       AbstractLogger.DEBUG, "This is an debug level information.");
 
   loggerChain.logMessage(AbstractLogger.ERROR, "This is an error information.");
+
+  // -------------- <Output>-----------
+// Standard Console::Logger:  This is an information.
+// File  ::Logger:  This is an debug level information.
+// Standard Console::Logger:  This is an debug level information.
+// Error  Console::Logger:  This is an error information.
+// File  ::Logger:  This is an error information.
+// Standard Console::Logger:  This is an error information.
 }
 
 AbstractLogger getChainOfLoggers() {
@@ -27,7 +35,6 @@ abstract class AbstractLogger {
 
   late int level;
 
-  //next element in chain or responsibility
   AbstractLogger? nextLogger;
 
   void setNextLogger(AbstractLogger nextLogger) {

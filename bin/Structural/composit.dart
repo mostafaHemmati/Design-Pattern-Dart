@@ -15,6 +15,15 @@ void main(List<String> args) {
   directory.addEmployee(engDirectory);
   directory.addEmployee(accDirectory);
   directory.showEmployeeDetails();
+
+// -------------- <Output>-----------
+// Company  directory  detail :
+// Company  engDirectory  detail :
+// name : Mostafa hemati  Id : 100  position : Pro Developer
+// name : hassan  kamrani  Id : 101  position : Developer
+// Company  accDirectory  detail :
+// name : mahdi zareei  Id : 200  position : Sr Manager
+// name : ramin Jafari  Id : 201  position : Manager
 }
 
 class Employee {

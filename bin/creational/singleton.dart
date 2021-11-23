@@ -5,6 +5,10 @@ void main(List<String> arguments) {
   instance2.showCounter();
   var instance3 = SingletonObject.getInstance();
   instance3.showCounter();
+  // -------------- <Output>-----------
+  // 0
+  // 1
+  // 2
 }
 
 class SingletonObject {

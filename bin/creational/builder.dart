@@ -1,6 +1,10 @@
 void main(List<String> args) {
-  Employee employee = EmployeeBuilder().setName("ali").setRole("role").build();
+  Employee employee =
+      EmployeeBuilder().setName("mostafa").setRole("developer").build();
   print("${employee._name}       ${employee._role}");
+
+// -------------- <Output>-----------
+// ali       role
 }
 
 class Employee {

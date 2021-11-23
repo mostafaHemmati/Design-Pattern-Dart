@@ -6,16 +6,26 @@ void main(List<String> args) {
   BinaryObserver(subject);
 
   print("First state change: 15");
-  subject.setState(15);
+  subject.state = 15;
   print("Second state change: 10");
-  subject.setState(10);
+  subject.state = 10;
+
+// -------------- <Output>-----------
+// First state change: 15
+// Hexa String : f
+// Octal String :  17
+// Binery String :  1111
+// Second state change: 10
+// Hexa String : a
+// Octal String :  12
+// Binery String :  1010
 }
 
 class Subject {
   final List<Observer> _observers = <Observer>[];
   late int _state;
-  int getState() => _state;
-  void setState(int state) {
+  int get state => _state;
+  set state(int state) {
     _state = state;
     notifyAllObservers();
   }
@@ -43,7 +53,7 @@ class BinaryObserver extends Observer {
   }
   @override
   void update() {
-    print("Binery String :  ${_subject.getState().toRadixString(2)}");
+    print("Binery String :  ${_subject.state.toRadixString(2)}");
   }
 }
 
@@ -54,7 +64,7 @@ class OctalObserver extends Observer {
   }
   @override
   void update() {
-    print("Octal String :  ${_subject.getState().toRadixString(8)}");
+    print("Octal String :  ${_subject.state.toRadixString(8)}");
   }
 }
 
@@ -65,6 +75,6 @@ class HexaObserver extends Observer {
   }
   @override
   void update() {
-    print("Hexa String : ${_subject.getState().toRadixString(16)}");
+    print("Hexa String : ${_subject.state.toRadixString(16)}");
   }
 }

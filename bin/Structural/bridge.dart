@@ -4,6 +4,9 @@ void main(List<String> args) {
 
   redCircle.draw();
   greenCircle.draw();
+  // -------------- <Output>-----------
+// Drawing Circle[ color: red, radius: 10, x:  100 , y: 100 ]
+// Drawing Circle[ color: green, radius:  10, x:  100 , y: 100 ]
 }
 
 class DrawAPI {

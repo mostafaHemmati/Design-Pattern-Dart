@@ -5,6 +5,10 @@ void main(List<String> args) {
   print("John is male?  ${isMale.interpreter("John")}");
   print(
       "Julie is a married women?  ${isMarriedWoman.interpreter("Married Julie")}");
+
+  // -------------- <Output>-----------
+// John is male?  true
+// Julie is a married women?  true
 }
 
 class Expression {
@@ -48,14 +52,12 @@ class AndExpression implements Expression {
   }
 }
 
-//Rule: Robert and John are male
 Expression getMaleExpression() {
   Expression robert = TerminalExpression("Robert");
   Expression john = TerminalExpression("John");
   return OrExpression(robert, john);
 }
 
-//Rule: Julie is a married women
 Expression getMarriedWomanExpression() {
   Expression julie = TerminalExpression("Julie");
   Expression married = TerminalExpression("Married");

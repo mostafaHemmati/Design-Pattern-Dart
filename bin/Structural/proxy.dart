@@ -1,12 +1,20 @@
 void main(List<String> args) {
   Image image = ProxyImage("test.jpg");
 
-  //image will be loaded from disk
+  print("image will be loaded from disk");
   image.display();
   print("-----------------");
 
-  //image will not be loaded from disk
+  print("image will not be loaded from disk");
   image.display();
+
+// -------------- <Output>-----------
+// image will be loaded from disk
+// Loading test.jpg
+// Displaying  test.jpg
+// -----------------
+// image will not be loaded from disk
+// Displaying  test.jpg
 }
 
 class Image {

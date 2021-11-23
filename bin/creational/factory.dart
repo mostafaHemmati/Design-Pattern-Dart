@@ -7,6 +7,11 @@ void main(List<String> args) {
 
   var shape3 = ShapeFactory().getShape(ShapeType.Square);
   shape3!.draw();
+
+// -------------- <Output>-----------
+// Inside Circle::draw method.
+// Inside Rectangle::draw() method.
+// Inside Square::draw() method.
 }
 
 class Shape {
@@ -30,7 +35,7 @@ class Square implements Shape {
 class Circle implements Shape {
   @override
   void draw() {
-    print("Insid Circle::draw method.");
+    print("Inside Circle::draw method.");
   }
 }
 

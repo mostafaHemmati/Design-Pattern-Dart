@@ -5,6 +5,12 @@ void main(List<String> args) {
     String name = iter.next() as String;
     print("Name : $name");
   }
+
+// -------------- <Output>-----------
+// Name : Robert
+// Name : John
+// Name : Julie
+// Name : Lora
 }
 
 class Iterator {

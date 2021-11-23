@@ -3,6 +3,10 @@ void main(List<String> args) {
 
   shapeMaker.drawCircle();
   shapeMaker.drawRectangle();
+
+// -------------- <Output>-----------
+// Circle::draw()
+// Rectangle::draw()
 }
 
 class Shape {

@@ -3,6 +3,14 @@ void main(List<String> args) {
   e1.showRecord();
   EmployeeRecord e2 = e1.getClone() as EmployeeRecord;
   e2.showRecord();
+
+// -------------- <Output>-----------
+// name : mostafa hemmati
+// designation : developer
+// id : 1
+// name : mostafa hemmati
+// designation : developer
+// id : 1
 }
 
 abstract class Prototype {
