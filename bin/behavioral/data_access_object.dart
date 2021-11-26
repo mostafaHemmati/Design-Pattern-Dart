@@ -1,5 +1,3 @@
-import 'package:test/expect.dart';
-
 void main(List<String> args) {
   StudentDao studentDao = StudentDaoImpl();
 
