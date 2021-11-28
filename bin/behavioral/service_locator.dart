@@ -1,3 +1,24 @@
+void main(List<String> args) {
+  Service? service = ServiceLocator.getService("SERVICE1");
+  service!.execute();
+  service = ServiceLocator.getService("SERVICE2");
+  service!.execute();
+  service = ServiceLocator.getService("SERVICE1");
+  service!.execute();
+  service = ServiceLocator.getService("SERVICE2");
+  service!.execute();
+
+// -------------- <Output>-----------
+// Looking up and creating a new Service1 object
+// Executing Service1
+// Looking up and creating a new Service2 object
+// Executing Service2
+// Returning cached  Service1 object
+// Executing Service1
+// Returning cached  Service2 object
+// Executing Service2
+}
+
 class Service {
   String? getName() {}
   void execute() {}
@@ -28,15 +49,14 @@ class Service2 implements Service {
 }
 
 class InitialContext {
-  Object? lookup(String jndiName) {
+  Object lookup(String jndiName) {
     if (jndiName == "SERVICE1") {
       print("Looking up and creating a new Service1 object");
       return Service1();
-    } else if (jndiName == "SERVICE2") {
+    } else {
       print("Looking up and creating a new Service2 object");
       return Service2();
     }
-    return null;
   }
 }
 
@@ -69,5 +89,17 @@ class Cache {
 }
 
 class ServiceLocator {
-  late Cache _cache;
+  static Cache _cache = Cache();
+  static Service? getService(String jndiName) {
+    Service? service = _cache.getService(jndiName);
+
+    if (service != null) {
+      return service;
+    }
+
+    InitialContext context = new InitialContext();
+    Service? service1 = context.lookup(jndiName) as Service;
+    _cache.addService(service1);
+    return service1;
+  }
 }
